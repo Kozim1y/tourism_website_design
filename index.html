@@ -4,12 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>World_Work</title>
 </head>
 <body>
   <header>
-    
+    <div class="container">
+      <nav class="navbar">
+        <div class="site-logo">
+          <a href="#">
+            <img src="images/site-logo.png" alt="site img">
+          </a>
+        </div>
+        <div class="site-logo-wrapper">
+          <ul class="site-menu effect">
+            <li><a href="#">Biz haqimizda</a></li>
+            <li><a href="#">Turlar</a></li>
+            <li><a href="#">Galareya</a></li>
+            <li><a href="#">Bog'lanish</a></li>
+          </ul>
+  
+          <div class="site-language">
+            <i class="fab fa-telegram"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+  
+            <form class="site-lang">
+              <select name="lang" id="lang">
+                <option selected value="uz">Uz</option>
+                <option value="eng">Eng</option>
+                <option value="ru">Ru</option>
+              </select>
+            </form>
+          </div>
+
+          <div class="burger-button" onclick="burgerButton()">
+            <div class="burger-1"></div>
+            <div class="burger-2"></div>
+            <div class="burger-3"></div>
+          </div>
+        </div>
+
+
+      </nav>
+    </div>
   </header>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

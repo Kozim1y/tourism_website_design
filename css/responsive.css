@@ -1,0 +1,6 @@
+@media (max-width:870px) {
+  .site-menu li a {
+    padding: 6px 14px;
+    font-size: 10px;
+  }
+}
