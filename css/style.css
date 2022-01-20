@@ -1,17 +1,249 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
 body {
     font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    height: 700px;
     background-image: url('../images/background2.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.my-container {
-    padding-left: 5%;
-    padding-right: 5%;
+.header_sc2_navbar {
+    height: 80px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sc2_navbar_logo a {
+    padding: 0px 10px;
+}
+
+.sc2_navbar_logo a img {
+    width: 30%;
+}
+
+.sc2_navbar_menu ul li {
+    display: inline-block;
+    padding: 5px 17.8px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.sc2_navbar_menu ul li:hover {
+    color: #ffc000;
+    transition: all 0.3s;
+}
+
+.sc2_navbar_underline {
+    width: 0%;
+    border-top: 1px solid #ffc000;
+    transition: all 0.5s;
+}
+
+.sc2_navbar_menu ul li:hover .sc2_navbar_underline {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.sc2_navbar_menu ul li:first-child .sc2_navbar_underline {
+    width: 100%;
+}
+
+.sc2_navbar_menu ul li:first-child {
+    color: #ffc000;
+}
+
+.sc2_navbar_menu ul li:last-child a button {
+    border: none;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    border: none;
+    padding: 5px 25px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 10px;
+    background-color: #ffc000;
+}
+
+.navbar_control {
+    display: none;
+    color: white;
+    font-size: 22px;
+}
+
+.navbar_control:hover {
+    color: white;
+}
+
+@media(max-width: 1300px) {
+    .sc2_navbar_menu ul li {
+        padding: 5px 10px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .sc2_navbar_menu ul li {
+        font-size: 17px;
+        padding: 5px;
+    }
+}
+
+@media(max-width: 992px) {
+    .header_sc2_navbar {
+        display: inherit;
+        height: 65px;
+    }
+
+    .sc2_navbar_logo a img {
+        width: 120px;
+    }
+
+    .sc2_navbar_logo {
+        width: 100%;
+        height: 65px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar_control {
+        display: block;
+    }
+
+    .sc2_navbar_menu ul {
+        padding: 10px 0px;
+    }
+
+    .sc2_navbar_menu {
+        -moz-transition: height .5s;
+        -ms-transition: height .5s;
+        -o-transition: height .5s;
+        -webkit-transition: height .5s;
+        transition: height .5s;
+        height: 0px;
+        overflow: hidden;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .sc2_navbar_menu ul li {
+        display: block;
+    }
+
+    .sc2_navbar_menu ul li:hover {
+        padding: 5px 0px 5px 10px;
+        transition: all 0.4s;
+    }
+
+    .sc2_navbar_underline {
+        display: none;
+    }
+}
+
+@media(max-width: 576px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    .header_sc2_navbar {
+        height: 55px;
+    }
+
+    .sc2_navbar_logo {
+        height: 55px;
+    }
+
+    .sc2_navbar_logo a img {
+        width: 90px;
+    }
+
+    .sc2_navbar_menu ul li {
+        font-size: 15px;
+    }
+}
+
+.section-1 {
+    height: 800px;
+    position: relative;
 }
 
 .ban {
-    height: 950px;
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgb(168, 167, 167);
+    transform: translateY(-60px);
 }
+
+.wrapper {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+}
+
+.weather .cels {
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+}
+
+.weather .cloud {
+    margin: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+    color: rgb(0, 60, 255);
+}
+
+.weather .col {
+    width: 2px;
+    height: 25px;
+    margin: 0 10px;
+    background-color: rgb(61, 61, 61);
+}
+
+.weather .city-name {
+    font-size: 18px;
+    color: rgb(158, 40, 40);
+}
+
+.weather .city-name i {
+    margin: 0 5px;
+    color: blue;
+}
+
+.date {
+    font-size: 20px;
+    color: blue;
+}
+
